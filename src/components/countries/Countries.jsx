@@ -5,7 +5,7 @@ const Countries = ({ promiseData }) => {
   const data = use(promiseData);
 
   return (
-    <div>
+    <div className="grid grid-cols-4 gap-10">
       {data?.map((country) => (
         <Country country={country} />
       ))}
