@@ -9,7 +9,6 @@ function App() {
   return (
     <>
       <Suspense fallback={<h3>data is loading....</h3>}>
-        <h2>Showing All Countries</h2>
         <Countries promiseData={promiseData} />
       </Suspense>
     </>
