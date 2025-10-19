@@ -1,15 +1,14 @@
 import { Suspense } from "react";
 import "./App.css";
-import Countries from "./components/countries/Countries";
+import Bottles from "./components/bottles/Bottles";
+
+const promiseData = fetch("/bottles.json").then((res) => res.json());
 
 function App() {
-  const promiseData = fetch(
-    "https://restcountries.com/v3.1/all?fields=name,capital,population,flags"
-  ).then((res) => res.json());
   return (
     <>
       <Suspense fallback={<h3>data is loading....</h3>}>
-        <Countries promiseData={promiseData} />
+        <Bottles promiseData={promiseData} />
       </Suspense>
     </>
   );
